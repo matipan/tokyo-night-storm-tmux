@@ -1,7 +1,5 @@
 #!/bin/env bash
 cd $1
-echo "Are we doing something here"
-
 BRANCH=$(git rev-parse --abbrev-ref HEAD 2>/dev/null)
 STATUS=$(git status --porcelain 2>/dev/null| egrep "^(M| M)" | wc -l)
 if test "$BRANCH" != ""; then
